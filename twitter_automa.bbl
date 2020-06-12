@@ -1,0 +1,90 @@
+\begin{thebibliography}{10}
+
+\bibitem{html5}
+W3~Schools.
+\newblock Html5 introduction.
+\newblock \url{https://www.w3schools.com/html/html5_intro.asp}.
+
+\bibitem{css}
+W3~Schools.
+\newblock Css tutorial.
+\newblock \url{https://www.w3schools.com/css/}.
+
+\bibitem{javascript}
+Pluralsight.
+\newblock Ready to try javascript?
+\newblock \url{https://www.javascript.com/}.
+
+\bibitem{ajax}
+W3~Schools.
+\newblock Ajax introduction.
+\newblock \url{https://www.w3schools.com/js/js_ajax_intro.asp}.
+
+\bibitem{nodejs}
+NodeJS.
+\newblock Node.js® is a javascript runtime built on chrome's v8 javascript
+  engine.
+\newblock \url{https://nodejs.org/en/}.
+
+\bibitem{heroku}
+Heroku.
+\newblock Learn about building, deploying, and managing your apps on heroku.
+\newblock \url{https://devcenter.heroku.com/}.
+
+\bibitem{twitterAPI}
+Twitter.
+\newblock Getting started with the twitter apis.
+\newblock \url{https://developer.twitter.com/en/docs/basics/getting-started}.
+
+\bibitem{jQuery}
+Marco Trombino.
+\newblock You might not need jquery: A 2018 performance case study.
+\newblock May 2018.
+\newblock
+  \url{https://medium.com/@trombino.marco/you-might-not-need-jquery-a-2018-performance-case-study-aa6531d0b0c3}.
+
+\bibitem{ajaxForms}
+Last update~by: peterschussheim.
+\newblock Sending forms through javascript.
+\newblock Aug 2018.
+\newblock
+  \url{https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript}.
+
+\bibitem{express}
+N/A.
+\newblock Node.js - express framework.
+\newblock
+  \url{https://www.tutorialspoint.com/nodejs/nodejs_express_framework.htm}.
+
+\bibitem{body-parser}
+dougwilson.
+\newblock body-parser module.
+\newblock \url{https://www.npmjs.com/package/body-parser}.
+
+\bibitem{path}
+N/A.
+\newblock path module.
+\newblock \url{https://nodejs.org/docs/latest/api/path.html}.
+
+\bibitem{twitter}
+desmondmorris.
+\newblock twitter module.
+\newblock \url{https://www.npmjs.com/package/twitter}.
+
+\bibitem{herokudeploy}
+Heroku.
+\newblock Deploying with git.
+\newblock \url{https://devcenter.heroku.com/articles/git}.
+
+\bibitem{woeid}
+Ross Elliot.
+\newblock Getting the woeid of a location.
+\newblock \url{http://woeid.rosselliot.co.nz/}.
+
+\bibitem{webhooks}
+Twitter.
+\newblock Getting started with webhooks.
+\newblock
+  \url{https://developer.twitter.com/en/docs/accounts-and-users/subscribe-account-activity/guides/getting-started-with-webhooks}.
+
+\end{thebibliography}
