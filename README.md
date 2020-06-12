@@ -1,6 +1,4 @@
-# [University of Milan]
-# [Project Report]
-# [Web & Mobile Programming]
+# University of Milan - Project Report - Web & Mobile Programming
 
 ------------------------------------------------------------------------
 
