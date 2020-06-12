@@ -7,10 +7,13 @@
 
 ------------------------------------------------------------------------
 
-*Author:* Andrei [Ciulpan]
-*Badge Number:* 872394
-*Academic Year:* 2018-2019
-*APP website:* <https://unimitwitterbot.herokuapp.com> (it's down now)
+**Author:** Andrei [Ciulpan]
+
+**Badge Number:** 872394
+
+**Academic Year:** 2018-2019
+
+**APP website:** <https://unimitwitterbot.herokuapp.com> (it's down now)
 
 Exam session of October 29, 2018
 
