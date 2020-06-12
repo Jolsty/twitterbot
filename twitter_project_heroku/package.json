@@ -1,0 +1,31 @@
+{
+  "name": "twitter_project",
+  "version": "1.0.0",
+  "description": "Project for Web Programming course",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jolsty/twitter_project.git"
+  },
+  "author": "Andrei Ciulpan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Jolsty/twitter_project/issues"
+  },
+  "homepage": "https://github.com/Jolsty/twitter_project#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "joi": "^13.7.0",
+    "log-to-file": "^1.2.2",
+    "nodemon": "^1.18.4",
+    "twitter": "^1.7.1"
+  },
+  "engines": {
+    "node": "8.10.0"
+  }
+}
