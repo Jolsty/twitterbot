@@ -1,20 +1,13 @@
----
-bibliography:
-- references.bib
----
-
-[University of Milan]{.smallcaps}\
-[Project Report]{.smallcaps}\
-[Web & Mobile Programming]{.smallcaps}\
+[University of Milan]
+[Project Report]
+[Web & Mobile Programming]
 
 ------------------------------------------------------------------------
 
-\
-**Twitter Automa**\
+**Twitter Automa**
 
 ------------------------------------------------------------------------
 
-\
 
 *Author:* Andrei [Ciulpan]{.smallcaps}\
 *Badge Number:* 872394\
@@ -49,7 +42,7 @@ data flow. The technological aspects will be shown in section 2.
 
 ### Users
 
-**Technical capabilities and possibilities**\
+**Technical capabilities and possibilities**
 This app is designed for any user who knows how to use Twitter and a
 browser on a very basic level; the user should be capable of
 understanding what a tweet or a trending hashtag is and how to access a
@@ -60,11 +53,11 @@ HTML content (for example through a browser). The information is
 displayed entirely in text, which means that the users won't use a lot
 of bandwidth to access the website.
 
-**Languages**\
+**Languages**
 The website is displayed in the english language, therefore the user
 must understand basic english in order to be able to understand the
 contents.\
-**Motivation**\
+**Motivation**
 The app's only purpose is to provide free information on an
 entertainment level for users interested in the global trending hashtags
 on Twitter.
@@ -77,7 +70,7 @@ value except for it being a source of information for interested users.
 
 ### Data Flow
 
-**Obtaining the data**\
+**Obtaining the data**
 The data displayed on the website is automatically updated via a webhook
 connection with Twitter. What this means is that every time something
 happens on the bot's Twitter account, for example when one of its tweets
@@ -90,7 +83,7 @@ and displayed in a human readable manner. It can be concluded that the
 time it takes to update the list is very insignificant and the user will
 not even notice it.
 
-**Archiving the data**\
+**Archiving the data**
 All the data shown on the website is received from the Twitter APIs by
 sending a GET request to statuses/user\_timeline. Each call to this URL
 returns a JSON object (Figure 2) that represents metadata for multiple
@@ -105,7 +98,7 @@ At the end of the day we are left with an array that contains selected
 information for multiple tweets. All of this is done server-side, but
 now this data must be sent to the client in order to show it on the
 website.\
-**Showing the information on the website**\
+**Showing the information on the website**
 The data from the server is sent to the client by using a HTML div with
 the hidden display property as in Figure 4. Normally there would be
 security issues by doing it this way but this data is not sensitive so
