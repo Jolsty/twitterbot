@@ -1,11 +1,7 @@
 
 # University of Milan - Project Report - Web & Mobile Programming
 
-------------------------------------------------------------------------
-
 ## Twitter Automa
-
-------------------------------------------------------------------------
 
 **Author:** Andrei [Ciulpan]
 
