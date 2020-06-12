@@ -1,27 +1,18 @@
----
-bibliography:
-- references.bib
----
 
-[University of Milan]{.smallcaps}\
-[Project Report]{.smallcaps}\
-[Web & Mobile Programming]{.smallcaps}\
+# University of Milan - Project Report - Web & Mobile Programming
 
 ------------------------------------------------------------------------
 
-\
-**Twitter Automa**\
+**Twitter Automa**
 
 ------------------------------------------------------------------------
 
-\
+*Author:* Andrei [Ciulpan]
+*Badge Number:* 872394
+*Academic Year:* 2018-2019
+*APP website:* <https://unimitwitterbot.herokuapp.com> (it's down now)
 
-*Author:* Andrei [Ciulpan]{.smallcaps}\
-*Badge Number:* 872394\
-*Academic Year:* 2018-2019\
-*APP website:* <https://unimitwitterbot.herokuapp.com>
-
-Exam session of October 29, 2018\
+Exam session of October 29, 2018
 
 Introduction
 ============
@@ -49,7 +40,7 @@ data flow. The technological aspects will be shown in section 2.
 
 ### Users
 
-**Technical capabilities and possibilities**\
+**Technical capabilities and possibilities**
 This app is designed for any user who knows how to use Twitter and a
 browser on a very basic level; the user should be capable of
 understanding what a tweet or a trending hashtag is and how to access a
@@ -60,11 +51,11 @@ HTML content (for example through a browser). The information is
 displayed entirely in text, which means that the users won't use a lot
 of bandwidth to access the website.
 
-**Languages**\
+**Languages**
 The website is displayed in the english language, therefore the user
 must understand basic english in order to be able to understand the
 contents.\
-**Motivation**\
+**Motivation**
 The app's only purpose is to provide free information on an
 entertainment level for users interested in the global trending hashtags
 on Twitter.
@@ -77,7 +68,7 @@ value except for it being a source of information for interested users.
 
 ### Data Flow
 
-**Obtaining the data**\
+**Obtaining the data**
 The data displayed on the website is automatically updated via a webhook
 connection with Twitter. What this means is that every time something
 happens on the bot's Twitter account, for example when one of its tweets
@@ -90,35 +81,53 @@ and displayed in a human readable manner. It can be concluded that the
 time it takes to update the list is very insignificant and the user will
 not even notice it.
 
-**Archiving the data**\
+![Time to get tweet list from Twitter by using the
+APIs.](images/getTweetsTime.png)
+
+**Archiving the data**
 All the data shown on the website is received from the Twitter APIs by
 sending a GET request to statuses/user\_timeline. Each call to this URL
 returns a JSON object (Figure 2) that represents metadata for multiple
 tweets from the caller's account and that we can handle with JavaScript.
+
+![Data returned as a JSON
+object.](images/getStatusesTimeline.png)
 
 This JSON object is rather large, and there's no need to use every
 single piece of information inside of it. The piece of code in Figure 3
 makes sure to select only the necessary information like the tweet ID,
 number of retweets and so on.
 
+![Selection of only the necessary
+information.](images/informationSelection.png)
+
 At the end of the day we are left with an array that contains selected
 information for multiple tweets. All of this is done server-side, but
 now this data must be sent to the client in order to show it on the
 website.\
-**Showing the information on the website**\
+**Showing the information on the website**
 The data from the server is sent to the client by using a HTML div with
 the hidden display property as in Figure 4. Normally there would be
 security issues by doing it this way but this data is not sensitive so
 it's not important. This is done thanks to the Express and EJS modules
 but they will be explained later on.
 
+![Passing data from server to
+client.](images/statisticsDiv.png)
+
 Then we get this data in a client-side script and add some HTML rules so
 it's interpreted nicely by the browser (Figure 5). You can see in the
 first line of code that we get the hidden div shown before.
 
+![Adding some HTML rules to our
+data.](images/interpretingTweetStatistics.png)
+
 This is done everytime a button that shows additional information is
 clicked. In Figure 6 you can see how it has a small impact on
 performance (roughly 0.4 ms).
+
+![Time to get tweet list from Twitter by using the
+APIs.](images/getStatsHTMLTime.png)
 
 Technological Aspects
 =====================
@@ -147,12 +156,16 @@ using res.render(). It is important to note that res.render() will look
 in a views folder for the view. So we only have to define \"index\"
 since the full path is views/index.ejs.
 
+![EJS](images/EJS.png)
+
 The Controller accepts user input (for example visiting a website,
 clicking on a button or submitting a form) and converts it to commands
 for the model or view. In this case it can be what the user can do with
 it like, for example, on the website there's a button that the user can
 click on to show more information for a tweet as you can see in Figure
 8.
+
+![Example of user input.](images/hashtagButton.png)
 
 Used technologies
 -----------------
@@ -167,6 +180,10 @@ All pages are developed in valid HTML5 and they use the HTML5 APIs like,
 for example, the DOM which can be easily modified by JavaScript code
 (see Figure 9 for an example).
 
+![DOM manipulation using jQuery. When the button is clicked by the user,
+\$(this) takes it and appends another div to it so that it can
+expand.](images/htmlAPI.png)
+
 ### CSS [@css]
 
 The presentation of the documents is styled by using CSS files embedded
@@ -177,6 +194,8 @@ file called custom.css which I created. Note that I didn't write all of
 my HTML5 & CSS code because I used a free to use template from W3.CSS
 called Dark Portfolio which can be found here:
 <https://www.w3schools.com/w3css/tryw3css_templates_dark_portfolio.htm>.
+
+![Embedding CSS into HTML.](images/embeddedCSS.png)
 
 ### JavaScript [@javascript]
 
@@ -208,9 +227,13 @@ means that the user is happy because the state of the page never
 changes) and the data will be sent in the background with an async
 request.
 
+![Sending forms with AJAX.](images/AJAX.png)
+
 As you can see this form is sent as a JSON string with a POST method on
 the \"/message\" URL. Our Express app then interprets this in NodeJS and
 logs the received data to console (Figure 12)
+
+![Receiving the form on the server.](images/AJAXserver.png)
 
 ### NodeJS [@nodejs]
 
@@ -218,6 +241,9 @@ The app uses various NodeJS modules that must be installed (Figure 13)
 like Express, Body-Parser, Path and 2 other files that I wrote and
 included in the main app file. There's another module which is not shown
 in this image: const Twitter = require('twitter');.
+
+![NodeJS modules. The Express app object is created on line
+9.](images/NodeJS.png)
 
 Express [@express] is a minimal and flexible Node.js web application
 framework that provides a robust set of features for web and mobile
@@ -232,10 +258,15 @@ request to \"/\" then it renders a file called index.ejs (this is
 possible because, as pointed out earlier, the app uses EJS as a view
 engine) that sits inside the views directory.
 
+![Using the express framework.](images/express.png)
+
 Another important thing that express is used for is to create a server
 that listens on a certain port (Figure 15). This is also possible with a
 module called \"http\" but express makes things a lot easier because it
 uses this module behind the scenes and provides additional abstraction.
+
+![Listening on a port with
+express.](images/expresslisten.png)
 
 Body-Parser [@body-parser] parses incoming request bodies in a
 middleware before your handlers, available under the req.body property.
@@ -243,6 +274,8 @@ The app uses this to parse JSON content so that, for example, it can
 read the form data sent through an AJAX call in POST (Figure 16). The
 second line of code in Figure 16 is a middleware and it parses UTF-8
 encoded bodies. It helps to parse URL encoded data like JSON objects
+
+![Using the body-Parser module.](images/bodyparser.png)
 
 Path [@path] provides utilities for working with file and directory
 paths. This app uses the path module to define a static directory for
@@ -254,6 +287,9 @@ C:/Users/Jolsty/Desktop/twitter\_project\_heroku/public. In conclusion,
 the line of code in Figure 17 will simply create an absolute path for
 the app.
 
+![Using the path module with an Express
+app.](images/pathStatic.png)
+
 Twitter [@twitter] is an asynchronous client library for the Twitter
 REST and Streaming API's (Figure 18). This module is used to create a
 twitter object with the OAuth credentials. With this object it's
@@ -264,6 +300,8 @@ which translates to
 metadata for tweets on our account (Figure 2). We will go more in depth
 on this module on the next subsection to see how the app uses the APIs
 to get the necessary information from Twitter.
+
+![Using the twitter module.](images/twitter.png)
 
 ### Heroku [@heroku]
 
@@ -289,6 +327,8 @@ but we are only interested in some of them:
 
 1.  Trends (Figure 19)
 
+    ![Trends endpoint.](images/trendsAPIv2.png)
+
     This endpoint returns the top 50 trending topics for a specific
     WOEID [@woeid] (in our case the WOEID = 1 which represents the
     entire Earth), if trending information is available for it. The
@@ -302,6 +342,12 @@ but we are only interested in some of them:
     The actual code that gets the trends and stores them in an array
     that is returned to a callback function is in Figure 21.
 
+    ![Updating trends every
+    hour.](images/trendsInterval.png)
+
+    ![Using the trends endpoint
+    (code).](images/trendsAPI.png)
+
 2.  Posting tweets (Figure 22)
 
     This endpoint updates the authenticating user's current status, also
@@ -310,7 +356,14 @@ but we are only interested in some of them:
     that would result in duplication will be blocked, resulting in a 403
     error. A user cannot submit the same status twice in a row.
 
+    ![Post tweets endpoint. Remember that the authentication is managed
+    by the twitter module.](images/tweetEndpoint.png)
+
     The code that does the actual tweeting can be seen in Figure 23.
+
+    ![Code to post tweets. The status is chosen randomly from the array
+    of trends that is passed to the callback function in
+    Figure 21.](images/tweetOut.png)
 
 3.  Getting tweet metadata (Figure 24)
 
@@ -322,6 +375,9 @@ but we are only interested in some of them:
     equivalent of the one seen as a user's profile on twitter.com. This
     method can only return up to 3,200 of a user's most recent tweets.
 
+    ![Get tweets endpoint. Returns tweet metadata for the caller's
+    account.](images/getTweetEndpoint.png)
+
     In Figure 25 you can see the code to get the metadata. This function
     gets the recent tweets (the number is specified by the variable
     called cnt) from the account and, after filtering them through the
@@ -332,6 +388,8 @@ but we are only interested in some of them:
     read (this can be different from the cnt variable because, for
     example, we can call this function with cnt = 200 but we don't
     actually have 200 tweets that can be returned).
+
+    ![Code to get tweets metadata.](images/getTweet.png)
 
 4.  Account activity APIs (based on webhooks) [@webhooks]
 
@@ -358,6 +416,12 @@ but we are only interested in some of them:
     accounts through a single connection. All activity types can be seen
     in Figure 27.
 
+    ![Twitter replaces streaming
+    APIs.](images/deprecatedStream.png)
+
+    ![Events included with the account activity
+    APIs.](images/activityAPIs.png)
+
     In order to get access to these APIs you must request for access.
     The free version allows for 1 webhook connection at a time, which is
     enough for us since we are only interested in managing one account.
@@ -365,11 +429,18 @@ but we are only interested in some of them:
     develop, deploy and host a web app that will receive Twitter webhook
     events (the steps to follow can be seen in Figure 28).
 
+    ![Steps to follow to implement a webhook connection with
+    Twitter.](images/accountActivitySteps.png)
+
     I created a web app with an URL to use my webhook to receive events
     (Figure 29). Everytime the app receives an event, it updates the
     internal list of tweets by using the getTweets function (this is
     limited to once per second to avoid spam and therefore avoid
     blacklisting of my account).
+
+    ![The app listens for POST requests on the specified URL, which
+    refers to
+    https://unimitwitterbot.herokuapp.com/webhook/twitter.](images/webhookPOST.png)
 
     Then I implemented the code that resolves the Twitter Challenge
     Response Check: first of all we make a POST request to
@@ -380,14 +451,34 @@ but we are only interested in some of them:
     can be seen on Figure 32 and the code that creates the hash code on
     Figure 33.
 
+    ![Creating the webhook connection. Note that the commented out code
+    was only executed once. The connection is persistent as long as we
+    do atleast one validation a
+    day.](images/createWebhook.png)
+
+    ![CRC response
+    requirements](images/CRCrequirements.png)
+
+    ![CRC response (code).](images/CRCresponse.png)
+
+    ![Generating the hash code.](images/hashCreation.png)
+
     The next step is registering a subscription for a certain user; in
     this case we register our own account (Figure 34). It's important to
     note that we need user-supplied access tokens to do this so, for
     security reasons, we can't do this for any random account.
 
+    ![Code to add webhook subscription with our own access token key.
+    Remember that the OAuth is being managed by the twitter module (we
+    created a twitter object with our own API
+    keys](images/addWebhookSubscription.png)
+
     The final step is testing the webhook: receiving events (Figure 29).
     An example of event is shown on Figure 35 after I favorited one of
     my own tweets.
+
+    ![Example of a favorite\_event
+    payload](images/favoriteEventExample.png)
 
     Note that we use the webhooks in order to update our internal list
     of tweets (this way everytime an event happens, like a tweet or
@@ -399,17 +490,26 @@ but we are only interested in some of them:
     earlier stages and I still have the code but it's been commented out
     (Figure 36).
 
+    ![Earlier implementation of the list
+    update](images/intervalUpdate.png)
+
 Additional attachments
 ======================
 
 First Draft
 -----------
 
+![First draft of website](images/first_draft.jpg)
 Application API Endpoints
 -------------------------
 
+![API endpoints for application](images/API.jpg)
+
 MVC example
 -----------
+
+![MVC example for how the button click updates our
+view](images/MVC.jpg)
 
 Conclusion
 ==========

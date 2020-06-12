@@ -169,7 +169,7 @@ in a human readable manner.
 It can be concluded that the time it takes to update the list is very insignificant and the user will not even notice it.
 
 \begin{figure}[H] % Example image
-\center{\includegraphics[width=1\linewidth]{images/getTweetsTime}}
+\includegraphics[width=1\linewidth]{images/getTweetsTime}
 \caption{Time to get tweet list from Twitter by using the APIs.}
 \label{getTweetsTime}
 \end{figure}
@@ -180,7 +180,7 @@ All the data shown on the website is received from the Twitter APIs by sending a
 Each call to this URL returns a JSON object (Figure 2) that represents metadata for multiple tweets from the caller's account and that we can handle with JavaScript.
 
 \begin{figure}[H] % Example image
-\center{\includegraphics[width=1\linewidth]{images/getStatusesTimeline}}
+\includegraphics[width=1\linewidth]{images/getStatusesTimeline}
 \caption{Data returned as a JSON object.}
 \label{getStatusesTimeline}
 \end{figure}
@@ -189,7 +189,7 @@ Each call to this URL returns a JSON object (Figure 2) that represents metadata 
 The piece of code in Figure 3 makes sure to select only the necessary information like the tweet ID, number of retweets and so on.
 
 \begin{figure}[H] % Example image
-\center{\includegraphics[width=1\linewidth]{images/informationSelection}}
+\includegraphics[width=1\linewidth]{images/informationSelection}
 \caption{Selection of only the necessary information.}
 \label{informationSelection}
 \end{figure}
@@ -204,7 +204,7 @@ Normally there would be security issues by doing it this way but this data is no
 This is done thanks to the Express and EJS modules but they will be explained later on.
 
 \begin{figure}[H] % Example image
-\center{\includegraphics[width=1\linewidth]{images/statisticsDiv}}
+\includegraphics[width=1\linewidth]{images/statisticsDiv}
 \caption{Passing data from server to client.}
 \label{statisticsDiv}
 \end{figure}
@@ -213,7 +213,7 @@ This is done thanks to the Express and EJS modules but they will be explained la
 nicely by the browser (Figure 5). You can see in the first line of code that we get the hidden div shown before.
 
 \begin{figure}[H] % Example image
-\center{\includegraphics[width=1\linewidth]{images/interpretingTweetStatistics}}
+\includegraphics[width=1\linewidth]{images/interpretingTweetStatistics}
 \caption{Adding some HTML rules to our data.}
 \label{interpretingTweetStatistics}
 \end{figure}
@@ -222,7 +222,7 @@ nicely by the browser (Figure 5). You can see in the first line of code that we 
 In Figure 6 you can see how it has a small impact on performance (roughly 0.4 ms).
 
 \begin{figure}[H] % Example image
-\center{\includegraphics[width=1\linewidth]{images/getStatsHTMLTime}}
+\includegraphics[width=1\linewidth]{images/getStatsHTMLTime}
 \caption{Time to get tweet list from Twitter by using the APIs.}
 \label{getStatsHTMLTime}
 \end{figure}
@@ -253,7 +253,7 @@ Notice how we send a view to the user by using res.render(). It is important to 
 So we only have to define "index"  since the full path is views/index.ejs.
 
 \begin{figure}[H] % Example image
-\center{\includegraphics[width=1\linewidth]{images/EJS}}
+\includegraphics[width=1\linewidth]{images/EJS}
 \caption{EJS}
 \label{EJS}
 \end{figure}
@@ -261,7 +261,7 @@ So we only have to define "index"  since the full path is views/index.ejs.
 \noindent The Controller accepts user input (for example visiting a website, clicking on a button or submitting a form) and converts it to commands for the model or view. In this case it can be what the user can do with it like, for example, on the website there's a button that the user can click on to show more information for a tweet as you can see in Figure 8.
 
 \begin{figure}[H] % Example image
-\center{\includegraphics[width=1\linewidth]{images/hashtagButton}}
+\includegraphics[width=1\linewidth]{images/hashtagButton}
 \caption{Example of user input.}
 \label{hashtagButton}
 \end{figure}
@@ -273,7 +273,7 @@ So we only have to define "index"  since the full path is views/index.ejs.
   \subsubsection{HTML5  \cite{html5}} All pages are developed in valid HTML5 and they use the HTML5 APIs like, for example, the DOM which can be easily modified by JavaScript code (see Figure 9 for an example).
 
 	\begin{figure}[H] % Example image
-	\center{\includegraphics[width=1\linewidth]{images/htmlAPI}}
+	\includegraphics[width=1\linewidth]{images/htmlAPI}
 	\caption{DOM manipulation using jQuery. When the button is clicked by the user, \$(this) takes it and appends another div to it so that it can expand.}
 	\label{htmlAPI}
 	\end{figure}
@@ -284,7 +284,7 @@ So we only have to define "index"  since the full path is views/index.ejs.
 	\url{https://www.w3schools.com/w3css/tryw3css_templates_dark_portfolio.htm}.
 
 	\begin{figure}[H] % Example image
-	\center{\includegraphics[width=1\linewidth]{images/embeddedCSS}}
+	\includegraphics[width=1\linewidth]{images/embeddedCSS}
 	\caption{Embedding CSS into HTML.}
 	\label{embeddedCSS}
 	\end{figure}
@@ -304,7 +304,7 @@ So we only have to define "index"  since the full path is views/index.ejs.
 	of the page never changes) and the data will be sent in the background with an async request.
 
 	\begin{figure}[H] % Example image
-	\center{\includegraphics[width=1\linewidth]{images/AJAX}}
+	\includegraphics[width=1\linewidth]{images/AJAX}
 	\caption{Sending forms with AJAX.}
 	\label{AJAX}
 	\end{figure}
@@ -312,7 +312,7 @@ So we only have to define "index"  since the full path is views/index.ejs.
 	\noindent As you can see this form is sent as a JSON string with a POST method on the "/message" URL. Our Express app then interprets this in NodeJS and logs the received data to console (Figure 12)
 
 	\begin{figure}[H] % Example image
-	\center{\includegraphics[width=1\linewidth]{images/AJAXserver}}
+	\includegraphics[width=1\linewidth]{images/AJAXserver}
 	\caption{Receiving the form on the server.}
 	\label{AJAXserver}
 	\end{figure}
@@ -321,7 +321,7 @@ So we only have to define "index"  since the full path is views/index.ejs.
 	There's another module which is not shown in this image: const Twitter = require('twitter');.
 
 	\begin{figure}[H] % Example image
-	\center{\includegraphics[width=1\linewidth]{images/NodeJS}}
+	\includegraphics[width=1\linewidth]{images/NodeJS}
 	\caption{NodeJS modules. The Express app object is created on line 9.}
 	\label{NodeJS}
 	\end{figure}
@@ -337,7 +337,7 @@ So we only have to define "index"  since the full path is views/index.ejs.
 	
 
 	\begin{figure}[H] % Example image
-	\center{\includegraphics[width=1\linewidth]{images/express}}
+	\includegraphics[width=1\linewidth]{images/express}
 	\caption{Using the express framework.}
 	\label{express}
 	\end{figure}
@@ -346,7 +346,7 @@ So we only have to define "index"  since the full path is views/index.ejs.
 	This is also possible with a module called "http" but express makes things a lot easier because it uses this module behind the scenes and provides additional abstraction.
 
 	\begin{figure}[H] % Example image
-	\center{\includegraphics[width=1\linewidth]{images/expresslisten}}
+	\includegraphics[width=1\linewidth]{images/expresslisten}
 	\caption{Listening on a port with express.}
 	\label{expresslisten}
 	\end{figure}
@@ -356,7 +356,7 @@ So we only have to define "index"  since the full path is views/index.ejs.
 	The second line of code in Figure 16  is a middleware and it parses UTF-8 encoded bodies. It helps to parse URL encoded data like JSON objects
 
 	\begin{figure}[H] % Example image
-	\center{\includegraphics[width=1\linewidth]{images/bodyparser}}
+	\includegraphics[width=1\linewidth]{images/bodyparser}
 	\caption{Using the body-Parser module.}
 	\label{bodyparser}
 	\end{figure}
@@ -366,7 +366,7 @@ So we only have to define "index"  since the full path is views/index.ejs.
 	C:/Users/Jolsty/Desktop/twitter\_project\_heroku/public. In conclusion, the line of code in Figure 17 will simply create an absolute path for the app.
 
 	\begin{figure}[H] % Example image
-	\center{\includegraphics[width=1\linewidth]{images/pathStatic}}
+	\includegraphics[width=1\linewidth]{images/pathStatic}
 	\caption{Using the path module with an Express app.}
 	\label{pathStatic}
 	\end{figure}
@@ -377,7 +377,7 @@ So we only have to define "index"  since the full path is views/index.ejs.
 	We will go more in depth on this module on the next subsection to see how the app uses the APIs to get the necessary information from Twitter.
 
 	\begin{figure}[H] % Example image
-	\center{\includegraphics[width=1\linewidth]{images/twitter}}
+	\includegraphics[width=1\linewidth]{images/twitter}
 	\caption{Using the twitter module.}
 	\label{twitter}
 	\end{figure}
@@ -398,7 +398,7 @@ So we only have to define "index"  since the full path is views/index.ejs.
 		\item Trends (Figure 19)
 
 		\begin{figure}[H] % Example image
-		\center{\includegraphics[width=1\linewidth]{images/trendsAPIv2}}
+		\includegraphics[width=1\linewidth]{images/trendsAPIv2}
 		\caption{Trends endpoint.}
 		\label{trendsAPIv2}
 		\end{figure}
@@ -407,13 +407,13 @@ So we only have to define "index"  since the full path is views/index.ejs.
 		The response is an array of trend objects that encode the name of the trending topic, the query parameter that can be used to search for the topic on Twitter Search, and 				the Twitter Search URL. This information is cached for 5 minutes. Requesting more frequently than that will not return any more data. As you can see in Figure 20 we call the 			getTrendsAndTweet() function every hour. This function gets the current trending list and then tweets out a single random one. The actual code that gets the trends and 				stores them in an array that is returned to a callback function is in Figure 21.
 
 		\begin{figure}[H] % Example image
-		\center{\includegraphics[width=1\linewidth]{images/trendsInterval}}
+		\includegraphics[width=1\linewidth]{images/trendsInterval}
 		\caption{Updating trends every hour.}
 		\label{trendsInterval}
 		\end{figure}
 
 		\begin{figure}[H] % Example image
-		\center{\includegraphics[width=1\linewidth]{images/trendsAPI}}
+		\includegraphics[width=1\linewidth]{images/trendsAPI}
 		\caption{Using the trends endpoint (code).}
 		\label{trendsAPI}
 		\end{figure}
@@ -425,7 +425,7 @@ So we only have to define "index"  since the full path is views/index.ejs.
 		Any attempt that would result in duplication will be blocked, resulting in a 403 error. A user cannot submit the same status twice in a row.
 
 		\begin{figure}[H] % Example image
-		\center{\includegraphics[width=1\linewidth]{images/tweetEndpoint}}
+		\includegraphics[width=1\linewidth]{images/tweetEndpoint}
 		\caption{Post tweets endpoint. Remember that the authentication is managed by the twitter module.}
 		\label{tweetEndpoint}
 		\end{figure}
@@ -433,7 +433,7 @@ So we only have to define "index"  since the full path is views/index.ejs.
 		The code that does the actual tweeting can be seen in Figure 23.
 
 		\begin{figure}[H] % Example image
-		\center{\includegraphics[width=1\linewidth]{images/tweetOut}}
+		\includegraphics[width=1\linewidth]{images/tweetOut}
 		\caption{Code to post tweets. The status is chosen randomly from the array of trends that is passed to the callback function in Figure 21.}
 		\label{tweetOut}
 		\end{figure}
@@ -446,7 +446,7 @@ So we only have to define "index"  since the full path is views/index.ejs.
 		This method can only return up to 3,200 of a user’s most recent tweets.
 
 		\begin{figure}[H] % Example image
-		\center{\includegraphics[width=1\linewidth]{images/getTweetEndpoint}}
+		\includegraphics[width=1\linewidth]{images/getTweetEndpoint}
 		\caption{Get tweets endpoint. Returns tweet metadata for the caller's account.}
 		\label{getTweetEndpoint}
 		\end{figure}
@@ -457,7 +457,7 @@ So we only have to define "index"  since the full path is views/index.ejs.
 		from the cnt variable because, for example, we can call this function with cnt = 200 but we don't actually have 200 tweets that can be returned).
 
 		\begin{figure}[H] % Example image
-		\center{\includegraphics[width=1\linewidth]{images/getTweet}}
+		\includegraphics[width=1\linewidth]{images/getTweet}
 		\caption{Code to get tweets metadata.}
 		\label{getTweet}
 		\end{figure}
@@ -472,13 +472,13 @@ So we only have to define "index"  since the full path is views/index.ejs.
 		This means that you can receive realtime Tweets, Direct Messages, and other account events from one or more of your owned or subscribed accounts 
 		through a single connection. All activity types can be seen in Figure 27.
 		\begin{figure}[H] % Example image
-		\center{\includegraphics[width=0.7\linewidth]{images/deprecatedStream}}
+		\includegraphics[width=0.7\linewidth]{images/deprecatedStream}
 		\caption{Twitter replaces streaming APIs.}
 		\label{deprecatedStream}
 		\end{figure}
 
 		\begin{figure}[H] % Example image
-		\center{\includegraphics[width=1\linewidth]{images/activityAPIs}}
+		\includegraphics[width=1\linewidth]{images/activityAPIs}
 		\caption{Events included with the account activity APIs.}
 		\label{activityAPIs}
 		\end{figure}
@@ -488,7 +488,7 @@ So we only have to define "index"  since the full path is views/index.ejs.
 		that will receive Twitter webhook events (the steps to follow can be seen in Figure 28).
 
 		\begin{figure}[H] % Example image
-		\center{\includegraphics[width=1\linewidth]{images/accountActivitySteps}}
+		\includegraphics[width=1\linewidth]{images/accountActivitySteps}
 		\caption{Steps to follow to implement a webhook connection with Twitter.}
 		\label{accountActivitySteps}
 		\end{figure}
@@ -496,7 +496,7 @@ So we only have to define "index"  since the full path is views/index.ejs.
 		I created a web app with an URL to use my webhook to receive events (Figure 29). Everytime the app receives an event, it updates the internal list of tweets by using the 				getTweets function (this is limited to once per second to avoid spam and therefore avoid blacklisting of my account).
 
 		\begin{figure}[H] % Example image
-		\center{\includegraphics[width=1\linewidth]{images/webhookPOST}}
+		\includegraphics[width=1\linewidth]{images/webhookPOST}
 		\caption{The app listens for POST requests on the specified URL, which refers to https://unimitwitterbot.herokuapp.com/webhook/twitter.}
 		\label{webhookPOST}
 		\end{figure}
@@ -506,26 +506,26 @@ So we only have to define "index"  since the full path is views/index.ejs.
 		The code that manages this GET request can be seen on Figure 32 and the code that creates the hash code on Figure 33.
 		
 		\begin{figure}[H] % Example image
-		\center{\includegraphics[width=1\linewidth]{images/createWebhook}}
+		\includegraphics[width=1\linewidth]{images/createWebhook}
 		\caption{Creating the webhook connection. Note that the commented out code was only executed once. The connection is persistent as long as we do atleast one
 		validation a day.}
 		\label{createWebhook}
 		\end{figure}
 
 		\begin{figure}[H] % Example image
-		\center{\includegraphics[width=1\linewidth]{images/CRCrequirements}}
+		\includegraphics[width=1\linewidth]{images/CRCrequirements}
 		\caption{CRC response requirements}
 		\label{CRCrequirements}
 		\end{figure}
 
 		\begin{figure}[H] % Example image
-		\center{\includegraphics[width=1\linewidth]{images/CRCresponse}}
+		\includegraphics[width=1\linewidth]{images/CRCresponse}
 		\caption{CRC response (code).}
 		\label{CRCresponse}
 		\end{figure}
 
 		\begin{figure}[H] % Example image
-		\center{\includegraphics[width=1\linewidth]{images/hashCreation}}
+		\includegraphics[width=1\linewidth]{images/hashCreation}
 		\caption{Generating the hash code.}
 		\label{hashCreation}
 		\end{figure}
@@ -534,7 +534,7 @@ So we only have to define "index"  since the full path is views/index.ejs.
 		we need user-supplied access tokens to do this so, for security reasons, we can't do this for any random account. 
 
 		\begin{figure}[H] % Example image
-		\center{\includegraphics[width=1\linewidth]{images/addWebhookSubscription}}
+		\includegraphics[width=1\linewidth]{images/addWebhookSubscription}
 		\caption{Code to add webhook subscription with our own access token key. Remember that the OAuth is being managed by the twitter module (we created a twitter object 				with our own API keys}
 		\label{addWebhookSubscription}
 		\end{figure}
@@ -542,7 +542,7 @@ So we only have to define "index"  since the full path is views/index.ejs.
 		The final step is testing the webhook: receiving events (Figure 29). An example of event is shown on Figure 35 after I favorited one of my own tweets.
 
 		\begin{figure}[H] % Example image
-		\center{\includegraphics[width=1\linewidth]{images/favoriteEventExample}}
+		\includegraphics[width=1\linewidth]{images/favoriteEventExample}
 		\caption{Example of a favorite\_event payload}
 		\label{favoriteEventExample}
 		\end{figure}
@@ -553,7 +553,7 @@ So we only have to define "index"  since the full path is views/index.ejs.
 		but it's been commented out (Figure 36).
 
 		\begin{figure}[H] % Example image
-		\center{\includegraphics[width=1\linewidth]{images/intervalUpdate}}
+		\includegraphics[width=1\linewidth]{images/intervalUpdate}
 		\caption{Earlier implementation of the list update}
 		\label{intervalUpdate}
 		\end{figure}
@@ -570,7 +570,7 @@ So we only have to define "index"  since the full path is views/index.ejs.
 \subsection{First Draft}
 
 	\begin{figure}[H] % Example image
-	\center{\includegraphics[width=0.6\linewidth]{images/first_draft}}
+	\includegraphics[width=0.6\linewidth]{images/first_draft}
 	\caption{First draft of website}
 	\label{firstDraft}
 	\end{figure}
@@ -578,7 +578,7 @@ So we only have to define "index"  since the full path is views/index.ejs.
 \subsection{Application API Endpoints}
 
 	\begin{figure}[H] % Example image
-	\center{\includegraphics[width=0.7\linewidth]{images/API}}
+	\includegraphics[width=0.7\linewidth]{images/API}
 	\caption{API endpoints for application}
 	\label{API)}
 	\end{figure}
@@ -586,7 +586,7 @@ So we only have to define "index"  since the full path is views/index.ejs.
 \subsection{MVC example}
 
 	\begin{figure}[H] % Example image
-	\center{\includegraphics[width=0.7\linewidth]{images/MVC}}
+	\includegraphics[width=0.7\linewidth]{images/MVC}
 	\caption{MVC example for how the button click updates our view}
 	\label{MVC)}
 	\end{figure}
