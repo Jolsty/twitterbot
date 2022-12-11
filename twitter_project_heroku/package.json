@@ -17,9 +17,9 @@
   },
   "homepage": "https://github.com/Jolsty/twitter_project#readme",
   "dependencies": {
-    "body-parser": "^1.18.3",
+    "body-parser": "^1.20.1",
     "ejs": "^2.6.1",
-    "express": "^4.16.3",
+    "express": "^4.18.2",
     "joi": "^13.7.0",
     "log-to-file": "^1.2.2",
     "nodemon": "^1.18.4",
